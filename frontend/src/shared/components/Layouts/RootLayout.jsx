@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Footer from "../Partials/Footer";
 import Header from "../Partials/Header";
 
-const RootLayout = ({ children }) => {
+const RootLayout = () => {
   return (
     <div className="root-main">
       <Link to="/">Home</Link>
@@ -10,7 +10,7 @@ const RootLayout = ({ children }) => {
       <Link to="/cars">Cars</Link>
 
       <Header />
-      {children}
+      <Outlet />
       <Footer />
     </div>
   );
